@@ -15,21 +15,21 @@ class ViewController: UIViewController {
     
     var tapCount = 0
     
+    @IBOutlet weak var Text1: UITextField!
+    
+    @IBOutlet weak var Text2: UITextField!
+    
+    
     
     @IBAction func buttonTapped(_ sender: Any) {
-        
-        tapCount = tapCount + 1
-        if tapCount >= 10
-    
-        {
-            theLabel.text = "Tapped the button 10 times"
-        }
+        print(Text1.text!)
+        print(Text2.text!)
         
     }
     
     @IBAction func TipIt(_ sender: Any) {
         
-        theLabel.text = "Buttons are cool!"
+       theLabel.text = "Answer: \(Double(Text1.text!)! + Double(Text2.text!)!)"
     }
     override func viewDidLoad() {
         super.viewDidLoad()
